@@ -2,6 +2,7 @@
 
 #include "DamageObstacle.h"
 #include "BatteryCollectorCharacter.h"
+#include "Components/StaticMeshComponent.h"
 
 
 ADamageObstacle::ADamageObstacle()

@@ -127,7 +127,7 @@ void ABatteryCollectorCharacter::CollectPickups()
 	}
 
 
-	UE_LOG(LogTemp, Warning, TEXT("Collect Button Was Pressed　Battery Update"));
+	UE_LOG(LogTemp, Warning, TEXT("Collect Button Was Pressed Battery Update"));
 	// 回収した分のバッテリーを反映させる
 	if (CollectedPower > 0)
 		UpdateCharacterPower(CollectedPower);

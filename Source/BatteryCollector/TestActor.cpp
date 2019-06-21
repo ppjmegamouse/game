@@ -3,6 +3,7 @@
 #include "TestActor.h"
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 //#include "Runtime/Engine/Classes/Engine/StaticMesh.h"
+#include "Components/StaticMeshComponent.h"
 
 // Sets default values
 ATestActor::ATestActor()
@@ -14,18 +15,18 @@ ATestActor::ATestActor()
 	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SphereMesh"));
 
 	// メッシュデータの読み込みが成功したらmeshにメッシュを設定
-	ConstructorHelpers::FObjectFinder<UStaticMesh> staticMeshAsset(TEXT("/Engine/EngineMeshes/Sphere.Sphere"));
-	ConstructorHelpers::FObjectFinder<UMaterialInterface> materialAsset(TEXT("/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"));
+	// ConstructorHelpers::FObjectFinder<UStaticMesh> staticMeshAsset(TEXT("/Engine/EngineMeshes/Sphere.Sphere"));
+	// ConstructorHelpers::FObjectFinder<UMaterialInterface> materialAsset(TEXT("/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"));
 
-	if (staticMeshAsset.Succeeded())
-	{
+	// if (staticMeshAsset.Succeeded())
+	// {
 		// ロードしたメッシュとマテリアルをセット
-		mesh->SetStaticMesh(staticMeshAsset.Object);
-		mesh->SetMaterial(0, materialAsset.Object);
+		// mesh->SetStaticMesh(staticMeshAsset.Object);
+		// mesh->SetMaterial(0, materialAsset.Object);
 
 		// 物理シミュレーションをオンにする
-		mesh->SetSimulatePhysics(true);
-	}
+		// mesh->SetSimulatePhysics(true);
+	// }
 }
 
 // Called when the game starts or when spawned
